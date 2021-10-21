@@ -1,0 +1,37 @@
+{
+  "name": "leaflet-con-typescript",
+  "version": "1.0.0",
+  "description": "Proyectos con la librería Leaflet y Typescript paso a paso",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx parcel ./index.html --open",
+    "build": "npx parcel build index.html --public-url '.'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leaflet-maps-course/course-projects-from-scratch.git"
+  },
+  "keywords": [
+    "leaflet",
+    "typescript",
+    "maps",
+    "mapas",
+    "geojson",
+    "polyline",
+    "marker",
+    "points"
+  ],
+  "author": "Anartz Mugika Ledo <mugan86@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/leaflet-maps-course/course-projects-from-scratch/issues"
+  },
+  "homepage": "https://github.com/leaflet-maps-course/course-projects-from-scratch#readme",
+  "dependencies": {
+    "leaflet": "^1.7.1",
+    "typescript": "4.4"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  }
+}
