@@ -1,11 +1,8 @@
 import { Map, tileLayer} from 'leaflet';
-import { tileLayers } from '../../../config/tile-layers/data';
 
-const mymap = new Map('map').setView([41.909986,12.3959119], 11);
+const mymap = new Map('map').setView([43.3082977,-1.9837398], 10);
 
-tileLayer.wms('http://ows.mundialis.de/services/service?', {
-    layers: 'Dark',
-    format: 'image/png',
-    transparent: true,
-    attribution: tileLayers.baseLayers.default.atribution
+tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
+	maxZoom: 20,
+	attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
 }).addTo(mymap);

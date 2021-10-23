@@ -1,6 +1,6 @@
-import { tileLayer } from "leaflet";
-import { tileLayers } from "./data";
-import { ITilerLayerOptions } from "./option.interface";
+import { tileLayer } from 'leaflet';
+import { tileLayers } from './data';
+import { ITilerLayerOptions } from './option.interface';
 
 export const tileLayerSelect = (
     layer: string = tileLayers.baseLayers.cartoDb.map.positron,
@@ -11,4 +11,4 @@ export const tileLayerSelect = (
     }
 ) => {
     return tileLayer(layer, options);
-}
+};
