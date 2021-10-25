@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+}
+.grid-container-header {
+  background: #333;
+  padding: 20px;
+  text-align: center;
+  color: whitesmoke;
+  font-size: 120%;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto 60% auto;
+  grid-template-rows: 80px 320px;
+  grid-gap: 10px;
+  background-color: white;
+  padding: 20px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 0;
+  font-size: 30px;
+}
+
+#attribution {
+    padding: 10px;
+    height: 100%;
+    background: #333;
+    text-align: center;
+    color: whitesmoke;
+}
