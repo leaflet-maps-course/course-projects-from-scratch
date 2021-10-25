@@ -8,5 +8,8 @@ export interface ITilerLayerOptions {
     zoomReverse?: boolean;
     detectRetina?: boolean;
     crossOrigin?: boolean | string;
+    layers?: string;
+    format?: string;
+    transparent?: boolean;
     attribution?: string;
 }
