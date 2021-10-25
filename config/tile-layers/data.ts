@@ -112,6 +112,15 @@ export const tileLayers = {
 };
 
 export const tileLayersWMS = {
+  ign: {
+    baseUrl: 'https://www.ign.es/wms-inspire/ign-base?',
+    layers: {
+      baseOrto : 'IGNBaseOrto',
+      baseTodo: 'IGNBaseTodo',
+      baseTodoGris: 'IGNBaseTodo-gris',
+      baseTodoNoFondo: 'IGNBaseTodo-nofondo'
+    }
+  },
   mundialis: {
     baseUrl: 'http://ows.mundialis.de/services/service?',
     layers: {
