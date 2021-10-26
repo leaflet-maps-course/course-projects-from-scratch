@@ -24,6 +24,6 @@ const notreDamePointMarker = marker([48.8528799,2.3497519]).addTo(mymap);
 
 mymap.fitBounds([
     [eiffelPointMarker.getLatLng().lat, eiffelPointMarker.getLatLng().lng],
-    // Sid ejamos esto, se centra en base a este
+    // Si dejamos esto, se centra en base a este
     [notreDamePointMarker.getLatLng().lat, notreDamePointMarker.getLatLng().lng]
-])
+]);
