@@ -1,5 +1,5 @@
-import { tileLayerWMSSelect } from './../../../config/tile-layers/functions';
-import { tileLayersWMS } from './../../../config/tile-layers/data';
+import { tileLayerWMSSelect } from '../../../config/tile-layers/functions';
+import { tileLayersWMS } from '../../../config/tile-layers/data';
 import { Map, marker } from 'leaflet';
 import { startMapTemplate } from '../../../assets/template/content';
 
