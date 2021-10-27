@@ -11,4 +11,4 @@ tileLayerSelect(tileLayers.baseLayers.osmHot.map, {
     attribution: tileLayers.baseLayers.osmHot.atribution
 }).addTo(mymap);
 
-marker([48.8594531,2.2950718]).addTo(mymap)
+marker([48.8594531,2.2950718]).addTo(mymap);
