@@ -6,3 +6,7 @@
   max-height: 500px;
   height: 100%;
 }
+
+.leaflet-popup-content img, .leaflet-tooltip-pane img{
+  width: 100%;
+}

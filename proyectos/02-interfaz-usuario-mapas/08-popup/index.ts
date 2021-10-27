@@ -2,11 +2,11 @@ import { tileLayers } from '../../../config/tile-layers/data';
 import { Map, marker } from 'leaflet';
 import { startMapTemplate } from '../../../assets/template/content';
 import { tileLayerSelect } from '../../../config/tile-layers/functions';
-
+// REcursos https://github.com/leaflet-maps-course/resources
 startMapTemplate(document, 'Sección 2 - 8 - Añadiendo Popup al marcador');
 
-// 1 .- Asignamos ubicación (Paris)
-const mymap = new Map('map').setView([40.7613536,-73.9103858], 11);
+// 1 .- Asignamos ubicación (Nueva York)
+const mymap = new Map('map').setView([18.3987923,-66.0726931], 11);
 
 // 2.- Especificamos el tipo de mapa
 tileLayerSelect(tileLayers.baseLayers.stadia.map.Outdoors, {
@@ -20,6 +20,8 @@ tileLayerSelect(tileLayers.baseLayers.stadia.map.Outdoors, {
 marker([40.7613536,-73.9103858]).addTo(mymap).bindPopup(`
     <h2 class="popuptitle"> Manhattan </h2>
     <span> Lugar muy turístico y que debes de visitar</span>
+    <br/>
+    <img src="https://raw.githubusercontent.com/leaflet-maps-course/resources/main/img/parks/manhattan.png" />
 `).openPopup(); 
 // openPopUp => Esto último hace que estée automáticamente abierto
 // Solo puede abrirse uno a la vez.
