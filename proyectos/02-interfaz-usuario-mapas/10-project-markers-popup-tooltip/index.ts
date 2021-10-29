@@ -16,21 +16,23 @@ tileLayerSelect(tileLayers.baseLayers.osmHot.map, {
 }).addTo(mymap);
 
 // 3.- Llamamos a la fuente de datos
-axios.get(INTEREST_POINTS.DONOSTIA_SANSEBASTIAN)
+axios.get(INTEREST_POINTS.ITALIA)
 .then((result: {data: { 
     title: string, description: string,
     location: {lat: number, lng: number},
     points: Array<{
-        lat: number, lng: number, info: string, name: string, img: string
+        lat: number, lng: number, info: string, name: string, img: string,
+        atribution: string, description: string
     }>
 }}) => {
     // 4.- Cargamos los marcadores y añadimos en el  mapa
     const points = result.data.points;
+    console.log(points);
     result.data.points.map((pointElement) => {
         marker([pointElement.lat, pointElement.lng]).addTo(mymap).bindPopup(`
             <h4> ${pointElement.name} </h4>
-            <p> Ubicación: ${pointElement.lat},${pointElement.lng}</p>
-            <img src="${pointElement.img}" width="200px"/><br/>
+            <p class="description"> ${pointElement.description}</p>
+            <img src="${pointElement.img}"/><br/>
             ${(pointElement.info !== "") ? `<a class="info" href="${pointElement.info}" target="_blank"> Más información</a>`: ``}            
         `);
     });

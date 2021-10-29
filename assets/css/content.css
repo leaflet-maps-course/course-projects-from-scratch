@@ -1,6 +1,9 @@
 * {
     margin: 0;
 }
+body {
+  overflow-y: hidden;
+}
 .grid-container-header {
   background: #333;
   padding: 20px;
@@ -27,6 +30,7 @@
 #attribution {
     padding: 10px;
     height: 100%;
+    overflow-y: hidden;
     background: #333;
     text-align: center;
     color: whitesmoke;

@@ -1,5 +1,5 @@
 import { tileLayers } from '../../../config/tile-layers/data';
-import { map, Map, marker } from 'leaflet';
+import { Map, marker } from 'leaflet';
 import { startMapTemplate } from '../../../assets/template/content';
 import { tileLayerSelect } from '../../../config/tile-layers/functions';
 
