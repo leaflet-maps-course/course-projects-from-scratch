@@ -1,6 +1,9 @@
 * {
     margin: 0;
 }
+body {
+  overflow-y: hidden;
+}
 .grid-container-header {
   background: #333;
   padding: 20px;
