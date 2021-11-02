@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { LatLngBoundsExpression, Map, marker } from 'leaflet';
+import { Map, marker } from 'leaflet';
 import { LOCATION_INTEREST_POINTS_POIS } from '../../../assets/api/poi-github';
 import { startMapTemplate } from '../../../assets/template/content';
 import { tileLayers } from '../../../config/tile-layers/data';
