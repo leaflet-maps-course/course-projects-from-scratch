@@ -17,35 +17,37 @@ tileLayerSelect(tileLayers.baseLayers.stadia.map.Outdoors, {
   attribution: tileLayers.baseLayers.stadia.atribution,
 }).addTo(mymap);
 
-
-// 3.- Icono de clase personalizado donde vamos a compartir las propiedades excepto 
+// 3.- Icono de clase personalizado donde vamos a compartir las propiedades excepto
 // URL del icono
 
-const CustomIcon = (options: IconOptions) => Icon.extend({
-  options: {
+const CustomIcon = (options: IconOptions) =>
+  Icon.extend({
+    options: {
       iconUrl: options.iconUrl,
-      shadowUrl: "https://leafletjs.com/examples/custom-icons/leaf-shadow.png",
-      iconSize: [38, 95],
-      shadowSize: [50, 64],
-      iconAnchor: [22, 94],
-      shadowAnchor: [4, 62],
-      popupAnchor: [-3, -76],
-  }
-});
-
+      shadowUrl: options.shadowUrl
+        ? options.shadowUrl
+        : "https://leafletjs.com/examples/custom-icons/leaf-shadow.png",
+      iconSize: options.iconSize ? options.iconSize : [38, 95],
+      shadowSize: options.shadowSize ? options.shadowSize : [50, 64],
+      iconAnchor: options.iconAnchor ? options.iconAnchor : [22, 94],
+      shadowAnchor: options.shadowAnchor ? options.shadowAnchor : [4, 62],
+      popupAnchor: options.shadowAnchor ? options.shadowAnchor : [-3, -76],
+    },
+  });
 
 // 4.- Marcadores personalizados con su icono
 const leafGreenIcon = CustomIcon({
-  iconUrl: "https://leafletjs.com/examples/custom-icons/leaf-green.png"
+  iconUrl: "https://leafletjs.com/examples/custom-icons/leaf-green.png",
 });
 
 const leafRedIcon = CustomIcon({
   iconUrl: "https://leafletjs.com/examples/custom-icons/leaf-red.png"
 });
 
+// 5.- Crear marcadores con los personalizados
 // Hollywood
 const hollywoodPoint = marker([34.098333333333, -118.32666666667], {
-  icon: new leafGreenIcon,
+  icon: new leafGreenIcon(),
 })
   .bindPopup(
     `
@@ -57,7 +59,7 @@ const hollywoodPoint = marker([34.098333333333, -118.32666666667], {
 
 // Aeropuerto Internacional LA
 const airportInternationalLAPoint = marker([33.9425, -118.408056], {
-  icon: new leafRedIcon,
+  icon: new leafRedIcon(),
 })
   .addTo(mymap)
   .bindPopup(
