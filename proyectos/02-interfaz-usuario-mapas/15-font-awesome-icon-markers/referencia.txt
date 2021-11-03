@@ -1,0 +1,8 @@
+1.- Descargar el fichero "custom-marker.css"
+2.- Ir a Font Awesome
+3.- Tener una cuenta registrada
+4.- Iniciar sesión
+5.- "Font Awesome Kits" ===> Manage Kits   
+6.- Create a new kit (si no lo tenemos)
+7.- Accedemos y seguir las instrucciones
+8.- Comprobamos iniciando proyecto, si coge "Sources" Font Awesome y los custom-markers.css
