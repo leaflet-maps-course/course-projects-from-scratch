@@ -1,0 +1,11 @@
+Instalar paquetes de leaflet.marketcluster
+npm install leaflet.markercluster@1.5.3
+npm install @types/leaflet.markercluster@1.4.5
+
+Añadir los assets de los CSS desde su repositorio Github
+https://github.com/Leaflet/Leaflet.markercluster
+
+Traer ell fichero de los 1000 marcadores de resources (Github)
+
+import { Map, marker, MarkerClusterGroup } from 'leaflet';
+import 'leaflet.markercluster'; // IMPORTANTE
