@@ -10,8 +10,8 @@ startMapTemplate(
 
 const mymap = new Map("map").setView([0, 0], 12);
 
-tileLayerSelect(tileLayers.baseLayers.blackWhite, {
-  attribution: tileLayers.baseLayers.default.atribution,
+tileLayerSelect(tileLayers.baseLayers.thunderForest.map.neighbourhood, {
+  attribution: tileLayers.baseLayers.thunderForest.atribution,
 }).addTo(mymap);
 
 // 3.- Iconos de capa (DivIcon)
