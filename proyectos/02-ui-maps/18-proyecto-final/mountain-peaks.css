@@ -1,0 +1,38 @@
+.mountain-peak {
+  text-align: center;
+  background-color: #ffffff;
+  line-height: 20px;
+  padding: 10px;
+  box-shadow: 2px 2px 2px #aaaaaa;
+  border-radius: 60%;
+  border: 1px solid rgb(183, 177, 177);
+  font-size: 18px;
+}
+.mountain-peak i {
+  margin-left: -2px;
+  margin-top: -2px;
+}
+
+.peak-blue {
+  color: blue;
+}
+
+.peak-red {
+  color: red;
+}
+
+.peak-green {
+  color: green;
+}
+
+.peak-yellow {
+  color: #f1d357;
+}
+
+.peak-orange {
+  color: orange;
+}
+
+.peak-pink {
+  color: pink;
+}
