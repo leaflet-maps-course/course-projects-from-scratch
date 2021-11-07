@@ -3,7 +3,7 @@ import {  Map, polyline, rectangle } from 'leaflet';
 import { startMapTemplate } from '../../../assets/template/content';
 import { tileLayerSelect } from '../../../config/tile-layers/functions';
 
-startMapTemplate(document, 'Secci&oacute; 3 - 02 - rectangle - Dibujar rectangulos');
+startMapTemplate(document, 'Secci&oacute; 3 - 03 - polyline - Dibujar líneas');
 
 const mymap = new Map('map').setView([0 , 0], 10);
 
