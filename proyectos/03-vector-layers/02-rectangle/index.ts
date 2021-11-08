@@ -1,11 +1,11 @@
-import { circle, circleMarker, Map, rectangle, LatLngBounds } from "leaflet";
-import { startMapTemplate } from "../../../assets/template/content";
-import { tileLayerSelect } from "../../../config/tile-layers/functions";
-import { tileLayers } from "../../../config/tile-layers/data";
+import { Map, rectangle, LatLngBounds } from 'leaflet';
+import { startMapTemplate } from '../../../assets/template/content';
+import { tileLayerSelect } from '../../../config/tile-layers/functions';
+import { tileLayers } from '../../../config/tile-layers/data';
 
-startMapTemplate(document, "Sección 3 - 02 - rectangle");
+startMapTemplate(document, 'Sección 3 - 02 - rectangle');
 
-const mymap = new Map("map").setView([43.2089, -2.4112], 10);
+const mymap = new Map('map').setView([43.2089, -2.4112], 10);
 
 tileLayerSelect(tileLayers.baseLayers.openTopoMap.map, {
   attribution: tileLayers.baseLayers.openTopoMap.atribution,
@@ -19,7 +19,7 @@ const bounds = new LatLngBounds([
 ]);
 
 // create an orange rectangle
-const rectangleOne = rectangle(bounds, { color: "#ff7800", weight: 1 }).addTo(
+const rectangleOne = rectangle(bounds, { color: '#ff7800', weight: 1 }).addTo(
   mymap
 );
 // Izquierda inferior / derecha superior
@@ -30,28 +30,28 @@ const boundsTwo = new LatLngBounds([
 
 // create an orange rectangle
 const rectangleTwo = rectangle(boundsTwo, {
-  color: "pink",
+  color: 'pink',
   weight: 7,
-  fillColor: "white",
+  fillColor: 'white',
   fillOpacity: 0.5,
 }).addTo(mymap);
 
 const boundsThree = new LatLngBounds([
-    [
-      rectangleOne.getBounds().getSouthWest().lat,
-      rectangleOne.getBounds().getSouthWest().lng,
-    ],
-    [
-      rectangleTwo.getBounds().getNorthEast().lat,
-      rectangleTwo.getBounds().getNorthEast().lng,
-    ],
-  ]);
+  [
+    rectangleOne.getBounds().getSouthWest().lat,
+    rectangleOne.getBounds().getSouthWest().lng,
+  ],
+  [
+    rectangleTwo.getBounds().getNorthEast().lat,
+    rectangleTwo.getBounds().getNorthEast().lng,
+  ],
+]);
 
-  const rectangleThree = rectangle(boundsThree, {
-    color: "red",
-    weight: 10,
-    fill: false
-  }).addTo(mymap);
+rectangle(boundsThree, {
+  color: 'red',
+  weight: 10,
+  fill: false,
+}).addTo(mymap);
 
 // zoom the map to the rectangle bounds
 mymap.fitBounds(boundsThree);
