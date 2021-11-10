@@ -1,5 +1,5 @@
 import { tileLayers } from '../../../config/tile-layers/data';
-import { circle, Map } from 'leaflet';
+import { circle, Map, marker, LatLngBounds, rectangle, polyline } from 'leaflet';
 import { startMapTemplate } from '../../../assets/template/content';
 import { tileLayerSelect } from '../../../config/tile-layers/functions';
 
@@ -11,25 +11,66 @@ tileLayerSelect(tileLayers.baseLayers.hikeBike.map, {
     attribution: tileLayers.baseLayers.hikeBike.atribution
 }).addTo(mymap);
 
-// Añadir un marcador
-// Añadir un par de círculos
-// 1 => radio = 120, color: azul, grosor de las lineas 5
-// 2=> radio = 400, color naranja, sin grosor
-// Añadir popup con la información de inundaciones en el primer caso y en el segundo 
-// zona de incendios
- const optionsXoxote = { radius: 120, color: "#ff7800", weight: 5};
- const xoxoteCirclePoint = circle([43.1998468 , -2.2865083], optionsXoxote)
- .bindTooltip("Xoxote (912m)", {
-   direction: 'bottom'
- }).addTo(mymap);
-const optionsKakueta = {color: "green", weight: 2, stroke: false}
- const kakuetaCirclePoint = circle([43.199256, -2.301116], 180, optionsKakueta)
- .bindTooltip("Kakueta (927m)", {
-   direction: 'left',
-   sticky: true
- }).addTo(mymap);
 
- mymap.fitBounds([
-     [xoxoteCirclePoint.getLatLng().lat, xoxoteCirclePoint.getLatLng().lng],
-     [kakuetaCirclePoint.getLatLng().lat, kakuetaCirclePoint.getLatLng().lng]
- ])
+// 1.- Marcador Londres 
+
+marker([51.5073219, -0.1276474]).addTo(mymap).bindPopup(`
+  <h5>Londres</h5>
+  <p>
+  Capital de Inglaterra y del Reino Unido. <br/>
+  <a href="https://es.wikipedia.org/wiki/Londres" target="_blank"> Más información</a>
+  </p>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Trafalgar_Square_by_Christian_Reimer.jpg/640px-Trafalgar_Square_by_Christian_Reimer.jpg" />
+  `);
+
+// 2.- Círculo con la zona de Candem Town
+
+circle([51.54230, -0.14050], {
+  weight: 6, color: 'pink', radius: 500
+}).bindTooltip('Camden Town').addTo(mymap);
+
+// 3.- Londres 1806 - Rectángulo
+// West Ham / Fulham
+// Añadiré el límite superior derecho y el límite izquierdo inferior
+
+const londresInPastBounds = new LatLngBounds([
+  [51.5371, 0.0188], [51.4724,-0.1983]
+]);
+
+rectangle(londresInPastBounds, {
+  color: '#36b6c7'
+}).addTo(mymap);
+
+// 4.- Big Ben
+
+circle([51.50068,-0.12457], {
+  radius: 10, color: 'yellow', fillColor: 'green', fillOpacity: 0.5
+}).addTo(mymap);
+
+// 5.- Carretera de Buckingham Palace
+
+const buckinghamPalaceRoad: [number, number] [] = 
+  [
+    [51.49105,-0.14939], 
+    [51.49252,-0.14779], 
+    [51.49386,-0.14684],
+    [51.49399,-0.14683],
+    [51.49590,-0.14549],
+    [51.49719,-0.14627],
+    [51.49726,-0.14635],
+    [51.49792,-0.14679]
+  ]; // Minimo dos posiciones, esto será un trazo
+
+  polyline(buckinghamPalaceRoad, {
+    weight: 8, color: '#e8c889'
+  }).addTo(mymap);
+
+
+// Último paso, crear los límites imaginarios para trazar la zona y centrar y ajustar zoom
+const adjustCenterZoomBounds = new LatLngBounds([
+  // Forestgate - Manor park / 
+  [51.5518,0.0360], [51.4724,-0.1983]
+]);
+// Esto lo usamos como referencia
+// const adjustREctangle = rectangle(adjustCenterZoomBounds).addTo(mymap);
+mymap.fitBounds(adjustCenterZoomBounds);
