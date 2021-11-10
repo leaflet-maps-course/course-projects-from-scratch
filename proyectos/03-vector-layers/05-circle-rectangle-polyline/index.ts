@@ -1,4 +1,4 @@
-import { circle, Map, marker } from 'leaflet';
+import { circle, Map, marker, rectangle, LatLngBounds } from 'leaflet';
 import { startMapTemplate } from '../../../assets/template/content';
 import { tileLayerSelect } from '../../../config/tile-layers/functions';
 import { tileLayers } from '../../../config/tile-layers/data';
@@ -26,6 +26,18 @@ const markerLondon = marker([51.50732,-0.12859]).addTo(mymap).bindPopup(`
 
 const camdenTowm = circle([51.54230,-0.14050], {
     color: 'pink', weight: 6, fillColor: 'blue', fillOpacity: 0.5, radius: 500
+}).addTo(mymap).bindTooltip('Camden Town');
+
+// 3.- Rectángulo con Londres de 1806
+
+rectangle(new LatLngBounds([
+    [51.5335, 0.0005], [51.4698, -0.2134]
+]), {
+    color: '#36b6c7'
 }).addTo(mymap);
 
+// 4.- Big Ben con un círculo
 
+circle([51.50069,-0.12459], {
+    color: 'green', weight: 3, fillOpacity: 0.5, radius: 10
+}).addTo(mymap).bindTooltip('Big Ben');
