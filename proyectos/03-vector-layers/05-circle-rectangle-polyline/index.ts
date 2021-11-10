@@ -1,4 +1,4 @@
-import { circle, Map, marker, rectangle, LatLngBounds } from 'leaflet';
+import { circle, Map, marker, rectangle, LatLngBounds, polyline } from 'leaflet';
 import { startMapTemplate } from '../../../assets/template/content';
 import { tileLayerSelect } from '../../../config/tile-layers/functions';
 import { tileLayers } from '../../../config/tile-layers/data';
@@ -41,3 +41,25 @@ rectangle(new LatLngBounds([
 circle([51.50069,-0.12459], {
     color: 'green', weight: 3, fillOpacity: 0.5, radius: 10
 }).addTo(mymap).bindTooltip('Big Ben');
+
+// 5.- Trazado de la avenida de Buckingham a los jardines Grosvenor
+
+const roadLinesBounds : [number, number][]= [
+    [51.49103, -0.1494],
+    [51.49251, -0.14779],
+    [51.49382, -0.14686],
+    [51.49411, -0.14676],
+    [51.49591, -0.14548],
+    [51.49796, -0.14683]
+];
+
+polyline(roadLinesBounds, { weight: 8, color: '#e8c889'}).addTo(mymap);
+
+// Limites para centrar y aplicar zoom correctamente
+const zoomCenterAdjust = new LatLngBounds([
+    [51.5581, 0.0012], [51.4698, -0.2134]
+]);
+
+// rectangle(zoomCenterAdjust).addTo(mymap);
+
+mymap.fitBounds(zoomCenterAdjust);
