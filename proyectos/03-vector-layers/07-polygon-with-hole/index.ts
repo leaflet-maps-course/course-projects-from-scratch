@@ -143,11 +143,11 @@ const stadium = [
 ];
 
 const stadiumWithoutPlayCourt: [number, number][][] =[
-  [ // Grada
-    ...stadium.map((point) => point.reverse() as [number, number])
+  [ // Grada, coge tammbién el campo, luego lo cortamos
+    ...stadium.map((point) => point.reverse() as [number, number]),
   ],
-  footballField
-]
+  footballField // Corte
+];
 polygon(stadiumWithoutPlayCourt, 
 { color: 'grey'}).bindPopup('Anoeta Estadioa (Reale Arena) - Gradas').addTo(mymap);
 
