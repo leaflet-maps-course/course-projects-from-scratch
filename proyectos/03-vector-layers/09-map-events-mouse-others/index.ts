@@ -29,9 +29,21 @@ mymap.on("mouseout", (e: { latlng: LatLng }) =>
   console.log(`SALE - mouseout: ${e.latlng.toString()}`)
 );
 
+let clickMap = 0;
+// Guardamos ubicaciones
+let points: Array<LatLng> = [];
 // Cuando hacemos click sobre el mapa
 mymap.on("mousedown", (e: { latlng: LatLng }) => {
   console.log(`CLICK en mapa - mousedown: ${e.latlng.toString()}`);
+  // Ejercicio Práctico (Almacenar puntos y hacer líneas)
+  points.push(e.latlng);
+  clickMap += 1
+  if (clickMap === 2) {
+    console.log(points);
+    polyline(points).addTo(mymap);
+    points.length = 0;
+    clickMap = 0;
+  }
 }
 );
 
