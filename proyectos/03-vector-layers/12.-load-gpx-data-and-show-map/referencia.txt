@@ -1,0 +1,10 @@
+Información de GPX Parse
+
+https://luuka.github.io/GPXParser.js/doc/index.html
+
+Ruta que usaremos para cargar y mostrarlo:
+https://raw.githubusercontent.com/leaflet-maps-course/resources/main/tracks/track.gpx
+
+Más rutas:
+
+https://github.com/leaflet-maps-course/resources/tree/main/tracks
