@@ -10,3 +10,7 @@
 .leaflet-popup-content img, .leaflet-tooltip-pane img{
   width: 100%;
 }
+
+.leaflet-control-layers-base, .leaflet-control-layers-overlays {
+  text-align: left;
+}

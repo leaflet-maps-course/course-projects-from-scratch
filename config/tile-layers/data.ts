@@ -109,6 +109,19 @@ export const tileLayers = {
       atribution: ATRIBUTIONS_LIST.OSM,
     },
   },
+  overlayers: {
+    openSeaMap: "https://tiles.openseamap.org/seamark/{z}/{x}/{y}.png",
+    openPtMap: "http://openptmap.org/tiles/{z}/{x}/{y}.png",
+    openRailway:
+      "https://{s}.tiles.openrailwaymap.org/standard/{z}/{x}/{y}.png",
+    wayMarkedTrails: {
+      hiking: "https://tile.waymarkedtrails.org/hiking/{z}/{x}/{y}.png",
+      cycling: "https://tile.waymarkedtrails.org/cycling/{z}/{x}/{y}.png",
+      mtb: "https://tile.waymarkedtrails.org/mtb/{z}/{x}/{y}.png",
+      slopes: "https://tile.waymarkedtrails.org/slopes/{z}/{x}/{y}.png",
+    },
+    openSnowMap: "https://tiles.opensnowmap.org/pistes/{z}/{x}/{y}.png",
+  }
 };
 
 export const tileLayersWMS = {
