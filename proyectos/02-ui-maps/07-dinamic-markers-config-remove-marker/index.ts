@@ -16,7 +16,7 @@ tileLayerSelect(tileLayers.baseLayers.thunderForest.map.atlas, {
 
 drinkWaterSoraluze.map((point) => {
     const markerItem = marker([point.lat, point.lon], {draggable: true}).addTo(mymap);
-    markerItem.on("move", () => {
+    markerItem.on('move', () => {
         console.log(`Marcador de la posición (${point.name}) => ${point.lat} / ${point.lon} Eliminado!!!`);
         mymap.removeLayer(markerItem);
     });

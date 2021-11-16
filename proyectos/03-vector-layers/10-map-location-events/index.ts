@@ -16,14 +16,14 @@ tileLayerSelect(tileLayers.baseLayers.hikeBike.map, {
 mymap.on('locationfound', (e: {
     accuracy: number, latlng: LatLng
 }) => {
-    const markerItem = marker(e.latlng).addTo(mymap).bindPopup("Mi ubicación");
+    const markerItem = marker(e.latlng).addTo(mymap).bindPopup('Mi ubicación');
     circle(e.latlng, {
         radius: e.accuracy,
         color: 'red'
     }).addTo(mymap);
     mymap.fitBounds([
         [markerItem.getLatLng().lat, markerItem.getLatLng().lng]
-    ])
+    ]);
 });
 
 mymap.on('locationerror', (e: {message: string}) => console.error(e.message));

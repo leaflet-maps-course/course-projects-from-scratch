@@ -1,8 +1,8 @@
-import gpxParser from "gpxparser";
-import axios from "axios";
-import { circle, Map, polyline } from "leaflet";
-import { tileLayers } from "../../../config/tile-layers/data";
-import { tileLayerSelect } from "../../../config/tile-layers/functions";
+import gpxParser from 'gpxparser';
+import axios from 'axios';
+import { circle, Map, polyline } from 'leaflet';
+import { tileLayers } from '../../../config/tile-layers/data';
+import { tileLayerSelect } from '../../../config/tile-layers/functions';
 
 class GpsDrawMap {
   private map!: Map;
@@ -13,7 +13,7 @@ class GpsDrawMap {
   }
 
   private initMap = () => {
-    this.map = new Map("map").setView(this.location, 10);
+    this.map = new Map('map').setView(this.location, 10);
 
     tileLayerSelect(tileLayers.baseLayers.hikeBike.map, {
       attribution: tileLayers.baseLayers.hikeBike.atribution,
@@ -26,7 +26,7 @@ class GpsDrawMap {
         trackUrl
       )
       .then((result) => {
-        var gpx = new gpxParser(); //Create gpxParser Object
+        const gpx = new gpxParser(); //Create gpxParser Object
         gpx.parse(result.data); //parse gpx file from string data
         this.drawPoints(gpx.tracks[0].points);
       })
@@ -39,7 +39,7 @@ class GpsDrawMap {
         return [
             point.lat,
             point.lon
-        ]
+        ];
     });
 
     // Trazar la ruta con nuestro polyline

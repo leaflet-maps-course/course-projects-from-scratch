@@ -30,16 +30,16 @@ const hiking = tileLayerSelect(tileLayers.overlayers.wayMarkedTrails.hiking);
 // Control de las capas
 
 const baseLayers = {
-    "Default": defaultTileLayer,
-    "Cycle Map": cycleMapThunderForest,
-    "Transport": transportDarkThunderForest,
-    "OSM Manik": oSMManik
+    'Default': defaultTileLayer,
+    'Cycle Map': cycleMapThunderForest,
+    'Transport': transportDarkThunderForest,
+    'OSM Manik': oSMManik
 };
 
 const overlays = {
-    "Marker": centerDonostia,
-    "Hiking": hiking,
-    "Railway": railwayMap
+    'Marker': centerDonostia,
+    'Hiking': hiking,
+    'Railway': railwayMap
 };
 
 control.layers(baseLayers, overlays, {

@@ -1,11 +1,11 @@
-import { divIcon, Map, marker } from "leaflet";
-import { startMapTemplate } from "../../../assets/template/content";
-import { tileLayers } from "../../../config/tile-layers/data";
-import { tileLayerSelect } from "../../../config/tile-layers/functions";
+import { divIcon, Map, marker } from 'leaflet';
+import { startMapTemplate } from '../../../assets/template/content';
+import { tileLayers } from '../../../config/tile-layers/data';
+import { tileLayerSelect } from '../../../config/tile-layers/functions';
 
-startMapTemplate(document, "Sección 2 - 15 - Trabajando con Div Icon");
+startMapTemplate(document, 'Sección 2 - 15 - Trabajando con Div Icon');
 
-const mymap = new Map("map").setView([0, 0], 12);
+const mymap = new Map('map').setView([0, 0], 12);
 
 tileLayerSelect(tileLayers.baseLayers.stadia.map.Outdoors, {
   attribution: tileLayers.baseLayers.stadia.atribution,

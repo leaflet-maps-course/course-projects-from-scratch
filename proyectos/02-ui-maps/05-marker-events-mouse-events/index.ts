@@ -13,10 +13,10 @@ tileLayerSelect(tileLayers.baseLayers.osmHot.map, {
 
 const eiffelMarker = marker([48.8594531,2.2950718]).addTo(mymap);
 
-eiffelMarker.on("click", () => console.log("click"));
-eiffelMarker.on("dblclick", () => console.log("Doblie click"));
-eiffelMarker.on("mousedown", () => console.log("Haciendo click - mousedown"));
-eiffelMarker.on("mouseup", () => console.log("Dejando de hacer click - mouseup"));
-eiffelMarker.on("mouseover", () => console.log("mouseover - Estamos sobre el marcador"));
-eiffelMarker.on("mouseout", () => console.log("mouseout - No estamos sobre el marcador"));
-eiffelMarker.on("contextmenu", () => console.log("contextmenu - Click derecho del ratón"));
+eiffelMarker.on('click', () => console.log('click'));
+eiffelMarker.on('dblclick', () => console.log('Doblie click'));
+eiffelMarker.on('mousedown', () => console.log('Haciendo click - mousedown'));
+eiffelMarker.on('mouseup', () => console.log('Dejando de hacer click - mouseup'));
+eiffelMarker.on('mouseover', () => console.log('mouseover - Estamos sobre el marcador'));
+eiffelMarker.on('mouseout', () => console.log('mouseout - No estamos sobre el marcador'));
+eiffelMarker.on('contextmenu', () => console.log('contextmenu - Click derecho del ratón'));

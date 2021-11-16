@@ -14,9 +14,9 @@ tileLayerSelect(tileLayers.baseLayers.openTopoMap.map, {
 
 const libertyStatueMarker = circleMarker([40.689209, -74.044425], {
     radius: 30,
-    color: "#DBC016",
+    color: '#DBC016',
     fillOpacity: 0.3,
-    fillColor: "#16DB40",
+    fillColor: '#16DB40',
     weight: 5
 }).addTo(mymap).bindPopup(`
     <h5>Estatua de la Libertad</h5>
@@ -26,7 +26,7 @@ const libertyStatueMarker = circleMarker([40.689209, -74.044425], {
 const brooklynBridgeMarker = circleMarker([40.705667, -73.996333], {
     weight: 2,
     fill: false,
-    color: "#DF0CF0",
+    color: '#DF0CF0',
     radius: 50
 }).bindPopup(`
     <h5 class="brooklyn_title">Puente de Brooklyn</h5>

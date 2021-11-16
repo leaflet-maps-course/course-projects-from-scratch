@@ -29,8 +29,8 @@ axios.get(LOCATION_INTEREST_POINTS_POIS.ITALY).then((result: {
             <h4>${point.name}</h4>
             <p class="description">${point.description}</p>
             <img src="${point.img}" />
-            ${ (point.info !== "") ? 
-                `<br/><a href="${point.info}" target="_blank">Más información</a>` : ``}
+            ${ (point.info !== '') ? 
+                `<br/><a href="${point.info}" target="_blank">Más información</a>` : ''}
         `);
     });
     mymap.fitBounds([

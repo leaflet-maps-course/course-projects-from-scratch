@@ -25,7 +25,7 @@ polyline(latlngs, {color: 'yellow', weight: 9}).addTo(mymap);
 const latlngsRenoToSaltLake : [number, number][] = [
     [40.758,-111.854],  // Salt Lake City
     [43.557,-116.210] // Boise
-]
+];
 
 polyline(latlngsRenoToSaltLake, {color: 'green', weight: 4}).addTo(mymap);
 

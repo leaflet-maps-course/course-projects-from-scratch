@@ -12,7 +12,7 @@ tileLayerSelect(tileLayers.baseLayers.osmHot.map, {
 }).addTo(mymap);
 const options = {
     draggable: true
-}
+};
 const eiffelMarker = marker([48.8594531,2.2950718], options).addTo(mymap);
 const picassoMuseumMarker = marker([48.859175,2.3641795], options).addTo(mymap);
 const saintDennisMarker = marker([48.9346965,2.3656021], options).addTo(mymap);
@@ -24,14 +24,14 @@ mymap.fitBounds([
 ]);
 
 eiffelMarker.on('move', () => {
-    console.log("Marcador Eiffel eliminado");
+    console.log('Marcador Eiffel eliminado');
     mymap.removeLayer(eiffelMarker);
 });
 picassoMuseumMarker.on('move', () => {
-    console.log("Marcador Picasso eliminado");
+    console.log('Marcador Picasso eliminado');
     mymap.removeLayer(picassoMuseumMarker);
 });
 saintDennisMarker.on('move', () => {
-    console.log("Marcador Saint Denis eliminado");
+    console.log('Marcador Saint Denis eliminado');
     mymap.removeLayer(saintDennisMarker);
 });

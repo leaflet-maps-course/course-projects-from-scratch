@@ -1,9 +1,9 @@
-import { DivIcon } from "leaflet";
+import { DivIcon } from 'leaflet';
 
-export const MountainPeaksMarkers = (selectColor: string = "blue") =>
+export const MountainPeaksMarkers = (selectColor = 'blue') =>
   DivIcon.extend({
     options: {
       html: `<i class="fas fa-mountain peak-${selectColor}"></i>`,
-      className: `mountain-peak`,
+      className: 'mountain-peak',
     },
   });

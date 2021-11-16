@@ -15,9 +15,9 @@ const eiffelMarker = marker([48.8594531,2.2950718], {
     draggable: true
 }).addTo(mymap);
 
-eiffelMarker.on("movestart", () => console.log("movestart - Empezamos a mover"));
-eiffelMarker.on("dragstart", () => console.log("dragstart - Empezamos a arrastrar"));
-eiffelMarker.on("move", () => console.log("move - Estamos moviendo"));
-eiffelMarker.on("drag", () => console.log("drag - Estamos arrastrando"));
-eiffelMarker.on("moveend", () => console.log("moveend - Finalizamos mover"));
-eiffelMarker.on("dragend", () => console.log("dragend - Finalizamos arrastre"));
+eiffelMarker.on('movestart', () => console.log('movestart - Empezamos a mover'));
+eiffelMarker.on('dragstart', () => console.log('dragstart - Empezamos a arrastrar'));
+eiffelMarker.on('move', () => console.log('move - Estamos moviendo'));
+eiffelMarker.on('drag', () => console.log('drag - Estamos arrastrando'));
+eiffelMarker.on('moveend', () => console.log('moveend - Finalizamos mover'));
+eiffelMarker.on('dragend', () => console.log('dragend - Finalizamos arrastre'));
