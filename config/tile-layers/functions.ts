@@ -25,4 +25,4 @@ export const tileLayerWMSSelect = (
     }
 ) => {
     return tileLayer.wms(service, options);
-}
+};

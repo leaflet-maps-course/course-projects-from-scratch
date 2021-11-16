@@ -7,9 +7,10 @@
   height: 100%;
 }
 
-.leaflet-popup-content img,
-.leaflet-tooltip-pane img {
+.leaflet-popup-content img, .leaflet-tooltip-pane img{
   width: 100%;
-  display: flex;
-  justify-content: center;
+}
+
+.leaflet-control-layers-base, .leaflet-control-layers-overlays {
+  text-align: left;
 }

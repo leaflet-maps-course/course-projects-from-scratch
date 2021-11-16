@@ -1,22 +1,17 @@
-import { control, Map } from 'leaflet';
+import { Map, control } from 'leaflet';
 import { startMapTemplate } from '../../../assets/template/content';
 import { tileLayerSelect } from '../../../config/tile-layers/functions';
 
-startMapTemplate(document, 'Plantilla - Mapa con Typescript');
+startMapTemplate(document, 'Sección 04 - 02 - Control del zoom -  zoom');
 
-// https://leafletjs.com/reference.html#map-example
 const mymap = new Map('map', {
-    center: [43.3082977,-1.9837398],
-    zoom: 11,
-    zoomControl: false, // Escondemos el control de zoom por defecto
-  });
+    zoomControl: false
+}).setView([43.3082977,-1.9837398], 10);
 
-// https://leafletjs.com/reference.html#control-zoom
 tileLayerSelect().addTo(mymap);
 
-// control.zoom().addTo(mymap); // El básico
-
 control.zoom({
-    zoomInTitle: 'Acercar', // Para el texto el + cuando ponemos cursor
-    zoomOutTitle: 'Alejar'  // Para el texto el - cuando ponemos cursor
-}).addTo(mymap); // El básico
+    zoomInTitle: 'Acercar',
+    zoomOutTitle: 'Alejar',
+    position: 'topleft'
+}).addTo(mymap);

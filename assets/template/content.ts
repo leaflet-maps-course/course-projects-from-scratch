@@ -13,15 +13,15 @@ const contentHtml = (projectTile: string, nameLastname: string) => `
 
 export const startMapTemplate = (
     document: Document,
-    projectTile = "Sección -  Título de Proyecto",
-    nameLastname = "Anartz Mugika Ledo",
+    projectTile = 'Sección -  Título de Proyecto',
+    nameLastname = 'Anartz Mugika Ledo',
 ) => {
   document.title = projectTile;
   // 1. Seleccionamos el id del elemento principal
-  const app = document.getElementById("app");
+  const app = document.getElementById('app');
 
   // 2.- Creamos una capa temporal para añadir el con tenido HTML
-  const temp = document.createElement("div");
+  const temp = document.createElement('div');
   // 3.- Incrustamos el HTML de la constante
   temp.innerHTML = contentHtml(projectTile, nameLastname);
   // 4.- Añadimos en el primer nodo
