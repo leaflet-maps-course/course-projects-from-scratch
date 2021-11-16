@@ -2,7 +2,7 @@ import { Control, ControlPosition, DomUtil, Util } from "leaflet";
 
 const Watermark = Control.extend({
   // Para llamar al padre
-  initialize: function (options: {position: ControlPosition, img: string, border: true}) {
+  initialize: function (options: {position: ControlPosition, img: string, border: boolean}) {
     Util.setOptions(this, options); // Sobrescribimos las opciones
   },
   // Opciones del control
@@ -24,4 +24,4 @@ const Watermark = Control.extend({
   },
 });
 
-export const watermark = (options?: {position?: ControlPosition, img?: string, border?: true}) => new Watermark(options);
+export const watermark = (options?: {position?: ControlPosition, img?: string, border?: boolean}) => new Watermark(options);

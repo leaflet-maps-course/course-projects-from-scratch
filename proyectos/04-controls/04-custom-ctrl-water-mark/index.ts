@@ -17,3 +17,7 @@ const mymap = new Map("map").setView(
 tileLayerSelect().addTo(mymap);
 
 watermark({position: 'bottomleft'}).addTo(mymap);
+
+watermark({position: 'bottomleft', border: false}).addTo(mymap);
+
+watermark({position: 'topright', border: false}).addTo(mymap);
