@@ -5,7 +5,6 @@ import {
   Control,
   marker,
   ControlPosition,
-  ControlOptions,
 } from "leaflet";
 
 const MarkerCenterInMap = Control.extend({
@@ -27,6 +26,7 @@ const MarkerCenterInMap = Control.extend({
     container.style.width = "30px";
     container.style.height = "30px";
     container.style.padding = "10px";
+    
 
     // Esto es equivalente a hacer container.contextmenu...
 
