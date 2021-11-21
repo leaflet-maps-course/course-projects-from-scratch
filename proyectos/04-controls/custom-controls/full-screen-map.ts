@@ -8,7 +8,6 @@ const FullScreenMap = Control.extend({
       position: "topleft",
     },
     onAdd: () => {
-        let controlScreenFull = false;
         const container = DomUtil.create(
             "input",
             "leaflet-control-zoom leaflet-bar leaflet-control"
@@ -31,13 +30,12 @@ const FullScreenMap = Control.extend({
 
 
         container.onclick = () => {
-            if (!controlScreenFull) {
+            // https://developer.mozilla.org/es/docs/Web/API/Document/exitFullscreen
+            if (document.fullscreenElement) {
+                document.exitFullscreen();
+              } else {
                 document.getElementById("map")?.requestFullscreen();
-                controlScreenFull = true;
-            } else { // Para salir de pantalla completa
-                document.exitFullscreen()
-                controlScreenFull = false;
-            }
+              }
         };
 
         return container;
